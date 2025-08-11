@@ -1,0 +1,12 @@
+<h1>Serie als geschaut markieren</h1>
+
+<%= form_with model: [@user, @binge], local: true do |form| %>
+  <div>
+    <%= form.label :medium_id, "Serie auswählen" %><br>
+    <%= form.collection_select :medium_id, @series, :id, :title, prompt: "Bitte Serie auswählen" %>
+  </div>
+
+  <div>
+    <%= form.submit "Speichern" %>
+  </div>
+<% end %>

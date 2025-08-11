@@ -1,0 +1,12 @@
+<h1>Serien, die geschaut wurden</h1>
+
+<%= link_to "Neue Serie hinzufügen", new_user_binge_path(@user) %>
+
+<ul>
+  <% @binges.each do |binge| %>
+    <li>
+      <strong><%= binge.user.name %></strong> hat 
+      <em><%= binge.serie.title %></em> geschaut.
+    </li>
+  <% end %>
+</ul>
