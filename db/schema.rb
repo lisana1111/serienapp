@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_07_28_180706) do
+ActiveRecord::Schema[8.0].define(version: 2025_09_01_165733) do
   create_table "binges", force: :cascade do |t|
     t.integer "user_id"
     t.integer "medium_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status", default: 0, null: false
   end
 
   create_table "media", force: :cascade do |t|
@@ -42,6 +43,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_28_180706) do
     t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index "LOWER(email)", name: "index_users_on_lowercase_email", unique: true
   end
 end

@@ -1,14 +1,14 @@
 class BingesController < ApplicationController
   def index
   @user = User.find(params[:user_id])
-  @binges = @user.binges.includes(:serie)
+  @binges = @user.binges.includes(:medium)
 end
 
 
   def new
   @user = User.find(params[:user_id])
   @binge = Binge.new
-  @series = Medium.all
+  @media = Medium.all
 end
 
 def create
@@ -18,7 +18,7 @@ def create
   if @binge.save
     redirect_to user_binges_path(@user), notice: "Serie wurde hinzugefügt!"
   else
-    @series = Medium.all
+    @medium = Medium.all
     render :new
   end
 end
@@ -26,7 +26,8 @@ end
 private
 
 def binge_params
-  params.require(:binge).permit(:medium_id)
+  params.require(:binge).permit(:medium_id, :status)
 end
+
 
 end

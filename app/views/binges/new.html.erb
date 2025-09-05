@@ -3,7 +3,12 @@
 <%= form_with model: [@user, @binge], local: true do |form| %>
   <div>
     <%= form.label :medium_id, "Serie auswählen" %><br>
-    <%= form.collection_select :medium_id, @series, :id, :title, prompt: "Bitte Serie auswählen" %>
+    <%= form.collection_select :medium_id, @media, :id, :name, prompt: "Bitte Serie auswählen" %>
+  </div>
+
+   <div>
+    <%= form.label :status, "Status" %><br>
+<%= form.select :status, Binge::STATUS, prompt: "Bitte Status auswählen" %>
   </div>
 
   <div>

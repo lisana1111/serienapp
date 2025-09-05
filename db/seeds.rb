@@ -7,3 +7,7 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Medium.create!(name: "Film 1")
+Medium.create!(name: "Film 2")
+Medium.create!(name: "Film 3")
+Medium.create!(name: "Film 4")
