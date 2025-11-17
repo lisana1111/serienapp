@@ -1,0 +1,8 @@
+<h1><%= @media.name %></h1>
+
+
+<%= link_to "Back", media_path %>
+
+<%= link_to "Edit", edit_medium_path(@media) %>
+
+<%= button_to "Delete", @media, method: :delete, data: { turbo_confirm: "Are you sure?" } %>

@@ -63,4 +63,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "passwordless", "~> 1.8"
+gem "bcrypt", "~> 3.1.7"

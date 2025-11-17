@@ -6,7 +6,9 @@
   <% @binges.each do |binge| %>
     <li>
       <strong><%= binge.user.name %></strong> hat 
-      <em><%= binge.medium.name %></em> geschaut.
+      <em><%= binge.medium.name %> <%= binge.status %></em>.
     </li>
   <% end %>
 </ul>
+
+<%= link_to "Medien", media_path %>
