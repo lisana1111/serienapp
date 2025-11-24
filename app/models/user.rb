@@ -11,5 +11,6 @@ class User < ApplicationRecord
   validates :name,
             presence: true
 
-  has_many :binges, dependent: :destroy
+  has_many :binges, dependent: :destroy  
+    
 end
