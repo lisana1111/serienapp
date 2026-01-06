@@ -2,8 +2,8 @@ class BingesController < ApplicationController
   def index
     @user = User.find(params[:user_id]) #man kann andere User anschauen
     @binges = @user.binges.includes(:medium)
+    @friends = User.where
   end
-
 
   def new
     @user = @current_user

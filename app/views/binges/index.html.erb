@@ -6,9 +6,13 @@
   <% @binges.each do |binge| %>
     <li>
       <strong><%= binge.user.name %></strong> hat 
-      <em><%= binge.medium.name %> <%= binge.status %></em>.
+      <em><%= binge.medium.name %> <%= binge.status %></em> - <%= binge.friends(binge.user).map(&:name).uniq.join(", ") %>.
     </li>
   <% end %>
 </ul>
 
+<p>
 <%= link_to "Medien", media_path %>
+</p>
+
+<%= link_to "Users", users_path%>

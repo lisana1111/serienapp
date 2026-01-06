@@ -3,9 +3,9 @@
 <p>
   <% @users.each do |user| %>
     <li>
-      <strong><%= user.name %></strong> 
+      <strong><%= link_to user.name, user_binges_path(user) %></strong> 
     </li>
   <% end %>
 </p>
 
-<%= link_to "New User", new_user_path %>
+<%= link_to "New User", new_user_path %> 
